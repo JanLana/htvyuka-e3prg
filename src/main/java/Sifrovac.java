@@ -23,7 +23,7 @@ public class Sifrovac {
         String message = "Nazdar";
 
         System.out.println("zprava: " + Arrays.toString(message.getBytes()));
-        //System.out.println("Verejny klic: " + publicKey);
+        System.out.println("Verejny klic: " + publicKey);
 
         // sifrovani zpravy
         Cipher cipher = Cipher.getInstance("RSA");
@@ -37,7 +37,7 @@ public class Sifrovac {
         cipher2.init(Cipher.PRIVATE_KEY, privateKey);
         byte[] vystup = cipher2.doFinal(out);
 
-        //System.out.println("Soukromy klic: " + privateKey);
+        System.out.println("Soukromy klic: " + privateKey);
         System.out.println("rozsifrovane: " + Arrays.toString(vystup));
 
 
