@@ -21,7 +21,6 @@ public class Sifrovac {
 
 
         String message = "Nazdar";
-
         System.out.println("zprava: " + Arrays.toString(message.getBytes()));
         System.out.println("Verejny klic: " + publicKey);
 
