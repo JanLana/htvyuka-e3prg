@@ -1,3 +1,5 @@
+package cz.gyarab.prg3.s1;
+
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 

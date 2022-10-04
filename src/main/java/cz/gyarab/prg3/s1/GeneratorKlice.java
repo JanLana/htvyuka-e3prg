@@ -1,3 +1,5 @@
+package cz.gyarab.prg3.s1;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

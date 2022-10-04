@@ -1,3 +1,5 @@
+package cz.gyarab.prg3.s1;
+
 import jdk.swing.interop.SwingInterOpUtils;
 
 import javax.crypto.BadPaddingException;

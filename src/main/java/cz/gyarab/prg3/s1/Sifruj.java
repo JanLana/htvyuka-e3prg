@@ -1,3 +1,5 @@
+package cz.gyarab.prg3.s1;
+
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
