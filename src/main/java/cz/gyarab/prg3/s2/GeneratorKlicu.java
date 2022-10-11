@@ -7,7 +7,7 @@ import java.security.*;
 
 public class GeneratorKlicu {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
-        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSAkeyPairGenerator");
         keyPairGenerator.initialize(2048);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
 
