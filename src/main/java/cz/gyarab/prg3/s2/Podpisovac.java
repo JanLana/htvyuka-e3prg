@@ -10,13 +10,13 @@ public class Podpisovac {
     public static void main(String[] args) throws NoSuchAlgorithmException, SignatureException {
         String msg = "Pepa z Depa dluzi Janu Lanovi 1milion Kc.";
 
-        Signature signGenerator = Signature.getInstance("SHA1withRSA");
-        signGenerator.initSign(privateKey);
+       // Signature signGenerator = Signature.getInstance("SHA1withRSA");
+       // signGenerator.initSign(privateKey);
+       // signGenerator.update(msg.getBytes());
 
-        signGenerator.update(msg.getBytes());
-        byte[] sign = signGenerator.sign();
+       // byte[] sign = signGenerator.sign();
 
-        System.out.printf(msg);
-        Arrays.toString(sign);
+       // System.out.println(msg);
+       // Arrays.toString(sign);
     }
 }
