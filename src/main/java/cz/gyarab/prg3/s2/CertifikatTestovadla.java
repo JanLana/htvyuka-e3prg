@@ -16,6 +16,10 @@ public class CertifikatTestovadla {
         for (Certificate c: certs) {
             System.out.println("===================================");
             System.out.println(c);
+            System.out.println("===================================");
+            System.out.println("===================================");
+            System.out.println("===================================");
+
 
         }
     }
