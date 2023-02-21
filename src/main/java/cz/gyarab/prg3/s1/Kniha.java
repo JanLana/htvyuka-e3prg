@@ -1,6 +1,9 @@
 package cz.gyarab.prg3.s1;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Kniha {
     int knihaId;
@@ -22,34 +25,29 @@ public class Kniha {
                 '}';
     }
 
-    public void writeToDB(Connection conn) throws SQLException {
-        String sql = "INSERT INTO kniha VALUES(?,?,?)";
-        PreparedStatement uloz = conn.prepareStatement(sql);
-
-        uloz.setInt(1, knihaId);
-        uloz.setString(2, jmeno);
-        uloz.setInt(3, autorId);
-
-        uloz.executeUpdate();
-    }
-
     static public Kniha readFromDB(int id) {
-        rs;
-
-        return new Kniha(id, ..., ...);
+       //...
+        return null;
     }
 
+    public void writeToDB() throws SQLException {
+        try(Connection conn = DriverManager.getConnection("jdbc:sqlite:data2.db")) {
+            PreparedStatement uloz = conn.prepareStatement("INSERT INTO kniha VALUES (?,?,?)");
+            uloz.setInt(1, knihaId);
+            uloz.setString(2, jmeno);
+            uloz.setInt(3, autorId);
+            uloz.executeUpdate();
+        }
+    }
 
     public static void main(String[] args) throws SQLException {
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:data.db")) {
-            Kniha k2 = new Kniha(1, "dasenka", 5);
-            k2.writeToDB(conn);
+        //Kniha k = new Kniha(1, "maj", 3);
+        //k.writeToDB();
 
-            Kniha k = readFromDB(5);
-
-            System.out.println(k);
-            /* kód používající conn */
-        }
-
+        Kniha k2 = readFromDB(1);
+        System.out.println(k2);
     }
+
+
+
 }
