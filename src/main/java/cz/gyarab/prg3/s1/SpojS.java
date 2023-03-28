@@ -29,13 +29,15 @@ public class SpojS<T> {
 
 
         //MujIterator i = new UkazovatkoDoSpoS(seznam);
-        MujIterator i = new UkazovatkoDoStromu(s);
+        /* MujIterator i = new UkazovatkoDoStromu(s);
 
         while (i.hasNext()) {
             //SpojS s = i.next();
             //System.out.printf(s);
             System.out.println(i.next());
         }
+
+         */
 
 
     }
