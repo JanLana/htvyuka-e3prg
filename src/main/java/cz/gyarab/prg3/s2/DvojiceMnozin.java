@@ -7,6 +7,18 @@ public class DvojiceMnozin<T extends Set> {
     T prvni;
     T druhy;
 
+    public DvojiceMnozin(T prvni, T druhy) {
+        this.prvni = prvni;
+        this.druhy = druhy;
+    }
+
+    @Override
+    public String toString() {
+        return "DvojiceMnozin{" +
+                "prvni=" + prvni +
+                ", druhy=" + druhy +
+                '}';
+    }
 
     public static void main(String[] args) {
         Set<Integer> mn1 = new HashSet<>();
@@ -20,6 +32,7 @@ public class DvojiceMnozin<T extends Set> {
         Set<Integer> mn2 = new HashSet<>();
 
         DvojiceMnozin<Set<Integer>> m = new DvojiceMnozin<>(mn1, mn2);
+        System.out.println(m);
 
         //System.out.println(m.mensi());
         //System.out.println(m.nejmensiPrvek());
