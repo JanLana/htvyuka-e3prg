@@ -37,7 +37,9 @@ public class Dvojice<V extends Comparable<V>> { //implements Comparable<Dvojice>
 
     @Override
     public String toString() {
-        return "Dvojice{" +
+        Class cl = prvni.getClass();
+
+        return "Dvojice<" + cl.getCanonicalName() + ">{" +
                 "prvni=" + prvni +
                 ", druhy=" + druhy +
                 '}';
