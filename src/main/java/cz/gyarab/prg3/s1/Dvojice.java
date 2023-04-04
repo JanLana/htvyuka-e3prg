@@ -33,7 +33,9 @@ public class Dvojice<V extends Comparable> {
 
     @Override
     public String toString() {
-        return "Dvojice{" +
+        Class cl = prvni.getClass();
+
+        return "Dvojice<" + cl.getSimpleName() + ">{" +
                 "prvni=" + prvni +
                 ", druhy=" + druhy +
                 '}';
@@ -42,12 +44,6 @@ public class Dvojice<V extends Comparable> {
     public static void main(String[] args) {
         Dvojice<Integer> dveCisla = new Dvojice<>(123123, 1234);
         Dvojice<String> dvaRetezce = new Dvojice<>("aaa", "bbb");
-
-
-
-
-
-
 
         dvaRetezce.setPrvni("123");
 

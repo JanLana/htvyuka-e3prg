@@ -27,9 +27,9 @@ public class DvojiceListu<T extends Comparable> {
         ArrayList<String> seznam2 = new ArrayList<>();
         seznam1.add("dobry den");
 
-        //DvojiceListu<> dvaSeznamyRetezcu = new DvojiceListu<>(seznam1, seznam2);
+        DvojiceListu<?> dvaSeznamyRetezcu = new DvojiceListu<>(seznam1, seznam2);
 
-        //System.out.println("kratsi seznam:" + dvaSeznamyRetezcu.dejKratsi());
+        System.out.println("kratsi seznam:" ); //dvaSeznamyRetezcu.dejKratsi());
 
         //System.out.println("kratsi seznam:" + dvaSeznamyRetezcu.dejPrvniZKratsiho());
 
