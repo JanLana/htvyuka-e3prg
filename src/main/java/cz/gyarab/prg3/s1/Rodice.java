@@ -52,7 +52,7 @@ public class Rodice {
 
         //vypisPredky(a);
 
-        coMajiSpolecneho(new Integer(1), new Double(1));
+        coMajiSpolecneho(1, 1.1);
 
 
     }
